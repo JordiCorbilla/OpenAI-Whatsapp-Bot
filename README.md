@@ -3,9 +3,9 @@ OpenAI-Whatsapp-Bot
 
 Setup environment:
 
-- Windows 11
+- Windows 11 PRO
 - Python 3.12.1
-- PostreSQL 16.1
+- Sql Server Express v15
 - Twilio Account
 - OpenAPI Key
 
@@ -56,15 +56,49 @@ Successfully installed pip-23.3.2
 - Install the requirements file:
 
 ```
-fastapi
-uvicorn
-twilio
-openai
-python-decouple
-sqlalchemy
-psycopg2-binary
-python-multipart
-pyngrok
+aiohttp==3.9.1
+aiohttp-retry==2.8.3
+aiosignal==1.3.1
+annotated-types==0.6.0
+anyio==3.7.1
+attrs==23.2.0
+certifi==2023.11.17
+charset-normalizer==3.3.2
+click==8.1.7
+colorama==0.4.6
+distro==1.9.0
+fastapi==0.109.0
+frozenlist==1.4.1
+greenlet==3.0.3
+h11==0.14.0
+httpcore==1.0.2
+httpx==0.26.0
+idna==3.6
+iniconfig==2.0.0
+multidict==6.0.4
+openai==0.28.0
+packaging==23.2
+pluggy==1.3.0
+psycopg2-binary==2.9.9
+pydantic==2.5.3
+pydantic_core==2.14.6
+PyJWT==2.8.0
+pyngrok==7.0.5
+pyodbc==5.0.1
+pytest==7.4.4
+python-decouple==3.8
+python-multipart==0.0.6
+PyYAML==6.0.1
+requests==2.31.0
+sniffio==1.3.0
+SQLAlchemy==2.0.25
+starlette==0.35.1
+tqdm==4.66.1
+twilio==8.11.1
+typing_extensions==4.9.0
+urllib3==2.1.0
+uvicorn==0.26.0
+yarl==1.9.4
 ```
 
 ```
