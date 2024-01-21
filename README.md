@@ -293,5 +293,9 @@ INFO:     Application startup complete.
 ![image](https://github.com/JordiCorbilla/OpenAI-Whatsapp-Bot/assets/7347994/b8c2f61f-f070-4b04-bbeb-7fbfd71d1bbf)
 
   
+## Final result
+![image](https://github.com/JordiCorbilla/OpenAI-Whatsapp-Bot/assets/7347994/9374ef31-880d-46a0-89cb-09b3b7ebfa54)
+![image](https://github.com/JordiCorbilla/OpenAI-Whatsapp-Bot/assets/7347994/6ab97bb7-58af-4299-b573-d99d522b0293)
 
-  
+![image](https://github.com/JordiCorbilla/OpenAI-Whatsapp-Bot/assets/7347994/88d71253-7afa-4c78-868f-628c13c6ee24)
+
