@@ -230,5 +230,34 @@ postgres=# CREATE TABLE conversations ( id SERIAL NOT NULL,     sender VARCHAR, 
 CREATE TABLE
 ```
 
+- Setting up FAST API
+
+Set a barebone API (rest_fastapi.py):
+
+```
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+async def index():
+    return {"msg": "running"}
+```
+
+Run the API:
+
+```
+(venv) PS C:\repo\OpenAI-Whatsapp-Bot> uvicorn rest_fastapi:app --reload
+INFO:     Will watch for changes in these directories: ['C:\\repo\\OpenAI-Whatsapp-Bot']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [12928] using StatReload
+INFO:     Started server process [12932]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+```
+
+![image](https://github.com/JordiCorbilla/OpenAI-Whatsapp-Bot/assets/7347994/b8c2f61f-f070-4b04-bbeb-7fbfd71d1bbf)
+
+  
 
   
