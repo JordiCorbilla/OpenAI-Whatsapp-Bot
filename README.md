@@ -42,6 +42,11 @@ Installing collected packages: pip
 Successfully installed pip-23.3.2
 ```
 
+- Install Microsoft C++ Build Tools
+![image](https://github.com/JordiCorbilla/OpenAI-Whatsapp-Bot/assets/7347994/c6487430-625a-44f3-b614-8acecffdb378)
+
+
+
 - 
 - 
 - 
