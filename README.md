@@ -226,6 +226,8 @@ GRANT
 postgres=# GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO bot;
 GRANT
 postgres=#
+postgres=# CREATE TABLE conversations ( id SERIAL NOT NULL,     sender VARCHAR,         message VARCHAR,        response VARCHAR,       PRIMARY KEY (id));
+CREATE TABLE
 ```
 
 
