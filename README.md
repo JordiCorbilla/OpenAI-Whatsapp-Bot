@@ -192,11 +192,41 @@ Successfully installed PyJWT-2.8.0 PyYAML-6.0.1 aiohttp-3.9.1 aiohttp-retry-2.8.
 
 [https://sbp.enterprisedb.com/getfile.jsp?fileid=1258792](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
 
-- 
+- Create a sample DB within PostgreSQL:
+
+Launch the cmd and navigate to the postgre folder and run the following:
+
+```
+C:\Program Files\PostgreSQL\16\bin>psql -U postgres
+Password for user postgres:
+psql (16.1)
+WARNING: Console code page (850) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=# CREATE DATABASE mybotconversations
+postgres-# CREATE USER bot with ENCRYPTED PASSWORD 'bot';
+ERROR:  syntax error at or near "CREATE"
+LINE 2: CREATE USER bot with ENCRYPTED PASSWORD 'bot';
+        ^
+postgres=# CREATE DATABASE mybotconversations;
+CREATE DATABASE
+postgres=# CREATE USER bot with ENCRYPTED PASSWORD 'yourpassword';
+CREATE ROLE
+postgres=# GRANT ALL PRIVILEGES ON DATABASE mybotconversations TO bot;
+GRANT
+postgres=#
+postgres=# GRANT USAGE ON SCHEMA public TO bot;
+GRANT
+postgres=# GRANT CREATE ON SCHEMA public TO bot;
+GRANT
+postgres=# GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO bot;
+GRANT
+postgres=# GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO bot;
+GRANT
+postgres=#
+```
+
+
   
-
-- 
-
-- 
-- 
-- 
