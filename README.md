@@ -222,46 +222,17 @@ Installing collected packages: python-decouple, urllib3, typing-extensions, snif
 Successfully installed PyJWT-2.8.0 PyYAML-6.0.1 aiohttp-3.9.1 aiohttp-retry-2.8.3 aiosignal-1.3.1 annotated-types-0.6.0 anyio-4.2.0 attrs-23.2.0 certifi-2023.11.17 charset-normalizer-3.3.2 click-8.1.7 colorama-0.4.6 distro-1.9.0 fastapi-0.109.0 frozenlist-1.4.1 greenlet-3.0.3 h11-0.14.0 httpcore-1.0.2 httpx-0.26.0 idna-3.6 multidict-6.0.4 openai-1.9.0 psycopg2-binary-2.9.9 pydantic-2.5.3 pydantic-core-2.14.6 pyngrok-7.0.5 python-decouple-3.8 python-multipart-0.0.6 requests-2.31.0 sniffio-1.3.0 sqlalchemy-2.0.25 starlette-0.35.1 tqdm-4.66.1 twilio-8.11.1 typing-extensions-4.9.0 urllib3-2.1.0 uvicorn-0.26.0 yarl-1.9.4
 ```
 
-- Install PostgreSQL 16.1
+- Install SQL Server Express
 
-[https://sbp.enterprisedb.com/getfile.jsp?fileid=1258792](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
-
-- Create a sample DB within PostgreSQL:
-
-Launch the cmd and navigate to the postgre folder and run the following:
+- Create a sample DB
 
 ```
-C:\Program Files\PostgreSQL\16\bin>psql -U postgres
-Password for user postgres:
-psql (16.1)
-WARNING: Console code page (850) differs from Windows code page (1252)
-         8-bit characters might not work correctly. See psql reference
-         page "Notes for Windows users" for details.
-Type "help" for help.
-
-postgres=# CREATE DATABASE mybotconversations
-postgres-# CREATE USER bot with ENCRYPTED PASSWORD 'bot';
-ERROR:  syntax error at or near "CREATE"
-LINE 2: CREATE USER bot with ENCRYPTED PASSWORD 'bot';
-        ^
-postgres=# CREATE DATABASE mybotconversations;
-CREATE DATABASE
-postgres=# CREATE USER bot with ENCRYPTED PASSWORD 'yourpassword';
-CREATE ROLE
-postgres=# GRANT ALL PRIVILEGES ON DATABASE mybotconversations TO bot;
-GRANT
-postgres=#
-postgres=# GRANT USAGE ON SCHEMA public TO bot;
-GRANT
-postgres=# GRANT CREATE ON SCHEMA public TO bot;
-GRANT
-postgres=# GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO bot;
-GRANT
-postgres=# GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO bot;
-GRANT
-postgres=#
-postgres=# CREATE TABLE conversations ( id SERIAL NOT NULL,     sender VARCHAR,         message VARCHAR,        response VARCHAR,       PRIMARY KEY (id));
-CREATE TABLE
+create table Conversations(
+	id int identity(1,1) primary key,
+    sender varchar(max) null,
+    message varchar(max) null,
+    response varchar(max) null
+)
 ```
 
 - Setting up FAST API
