@@ -1,6 +1,14 @@
 # OpenAI-Whatsapp-Bot
 OpenAI-Whatsapp-Bot
 
+Setup environment:
+
+- Windows 11
+- Python 3.12.1
+- PostreSQL 16.1
+- Twilio Account
+- OpenAPI Key
+
 ## 1) Setup your Twilio Account
 
 - Create a free account with Twilio here -> https://www.twilio.com/en-us
@@ -180,6 +188,12 @@ Installing collected packages: python-decouple, urllib3, typing-extensions, snif
 Successfully installed PyJWT-2.8.0 PyYAML-6.0.1 aiohttp-3.9.1 aiohttp-retry-2.8.3 aiosignal-1.3.1 annotated-types-0.6.0 anyio-4.2.0 attrs-23.2.0 certifi-2023.11.17 charset-normalizer-3.3.2 click-8.1.7 colorama-0.4.6 distro-1.9.0 fastapi-0.109.0 frozenlist-1.4.1 greenlet-3.0.3 h11-0.14.0 httpcore-1.0.2 httpx-0.26.0 idna-3.6 multidict-6.0.4 openai-1.9.0 psycopg2-binary-2.9.9 pydantic-2.5.3 pydantic-core-2.14.6 pyngrok-7.0.5 python-decouple-3.8 python-multipart-0.0.6 requests-2.31.0 sniffio-1.3.0 sqlalchemy-2.0.25 starlette-0.35.1 tqdm-4.66.1 twilio-8.11.1 typing-extensions-4.9.0 urllib3-2.1.0 uvicorn-0.26.0 yarl-1.9.4
 ```
 
+- Install PostgreSQL 16.1
+
+[https://sbp.enterprisedb.com/getfile.jsp?fileid=1258792](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+
+- 
+  
 
 - 
 
