@@ -239,7 +239,7 @@ CREATE TABLE Conversations(
 
 - Setting up FAST API
 
-Set a barebone API (rest_fastapi.py):
+Set a barebone API (bot.py):
 
 ```python
 from fastapi import FastAPI
