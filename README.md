@@ -1,7 +1,7 @@
 # OpenAI-Whatsapp-Bot
 OpenAI-Whatsapp-Bot
 
-Setup environment:
+## Setup environment:
 
 - Windows 11 PRO (Mini Server x64 Intel Celeron 12 Gb)
 - Python 3.12.1
