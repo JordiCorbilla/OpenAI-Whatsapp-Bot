@@ -265,21 +265,27 @@ INFO:     Application startup complete.
 
 ## 3) Setup Ngrok
 
-Go to Ngrok and download the utility (https://ngrok.com/download) then just expose your port 8000 to ngrok via `ngrok http 8000` if you don't have a domain. Ngrok by default will provide a random domain e.g. ` https://621c00345df3.ngrok.app`
+Go to Ngrok and download the utility (https://ngrok.com/download) then just expose your port 8000 to ngrok via `ngrok http http://localhost:8000` if you don't have a domain. Ngrok by default will provide a random domain e.g. ` https://621c00345df3.ngrok.app`
 
 Navigate to your Twilio account and enter the end-point in the sandbox configuration:
 
 ![image](https://github.com/JordiCorbilla/OpenAI-Whatsapp-Bot/assets/7347994/425b31af-edd4-4664-8190-36b7e9dfed16)
 
-
 ![image](https://github.com/JordiCorbilla/OpenAI-Whatsapp-Bot/assets/7347994/b8c2f61f-f070-4b04-bbeb-7fbfd71d1bbf)
   
 ## 4) Python API interaction
+
+After running the bot.py and setting up the twilio account and interacting with whatsapp, you'll be able to see the activity on your screen:
+
 ![image](https://github.com/JordiCorbilla/OpenAI-Whatsapp-Bot/assets/7347994/9374ef31-880d-46a0-89cb-09b3b7ebfa54)
 
 ## 5) Database Message Storage
+
+As each message gets
+
 ![image](https://github.com/JordiCorbilla/OpenAI-Whatsapp-Bot/assets/7347994/6ab97bb7-58af-4299-b573-d99d522b0293)
 
 ## 6) Final Result, talking through Whatsapp
+
 ![image](https://github.com/JordiCorbilla/OpenAI-Whatsapp-Bot/assets/7347994/88d71253-7afa-4c78-868f-628c13c6ee24)
 
