@@ -7,6 +7,7 @@ Setup environment:
 - Python 3.12.1
 - Sql Server Express v15
 - Twilio Account
+- Ngrok
 - OpenAPI Key
 - Whatsapp (local phone)
 
@@ -19,24 +20,24 @@ Setup environment:
 
 ## 2) Install Python and create your development environment
 
-I've done this using the latest python available 3.12.1 (https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe) at the time of this writing. 
+I've done this using the latest python available **3.12.1** (https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe) at the time of this writing. 
 
 - Clone this repo: https://github.com/JordiCorbilla/OpenAI-Whatsapp-Bot.git
 
 - Create the dev environment:
 
-```
+```bash
 C:\repo\OpenAI-Whatsapp-Bot> python -m venv venv;
 ```
 
 - Enable the dev environment:
-```
+```bash
 C:\repo\OpenAI-Whatsapp-Bot\venv\Scripts>activate.bat
 ```
 
 - Upgrade pip
 
-```
+```bash
 (venv) C:\repo\OpenAI-Whatsapp-Bot\venv\Scripts>python.exe -m pip install --upgrade pip
 Requirement already satisfied: pip in c:\repo\openai-whatsapp-bot\venv\lib\site-packages (23.2.1)
 Collecting pip
@@ -54,9 +55,9 @@ Successfully installed pip-23.3.2
 - Install Microsoft C++ Build Tools
 ![image](https://github.com/JordiCorbilla/OpenAI-Whatsapp-Bot/assets/7347994/c6487430-625a-44f3-b614-8acecffdb378)
 
-- Install the requirements file:
+- Install the requirements file using `pip install -r requirements.txt`:
 
-```
+```bash
 aiohttp==3.9.1
 aiohttp-retry==2.8.3
 aiosignal==1.3.1
@@ -102,7 +103,7 @@ uvicorn==0.26.0
 yarl==1.9.4
 ```
 
-```
+```bash
 (venv) C:\repo\OpenAI-Whatsapp-Bot>pip install -r requirements.txt
 Collecting fastapi (from -r requirements.txt (line 1))
   Using cached fastapi-0.109.0-py3-none-any.whl.metadata (24 kB)
@@ -223,13 +224,13 @@ Installing collected packages: python-decouple, urllib3, typing-extensions, snif
 Successfully installed PyJWT-2.8.0 PyYAML-6.0.1 aiohttp-3.9.1 aiohttp-retry-2.8.3 aiosignal-1.3.1 annotated-types-0.6.0 anyio-4.2.0 attrs-23.2.0 certifi-2023.11.17 charset-normalizer-3.3.2 click-8.1.7 colorama-0.4.6 distro-1.9.0 fastapi-0.109.0 frozenlist-1.4.1 greenlet-3.0.3 h11-0.14.0 httpcore-1.0.2 httpx-0.26.0 idna-3.6 multidict-6.0.4 openai-1.9.0 psycopg2-binary-2.9.9 pydantic-2.5.3 pydantic-core-2.14.6 pyngrok-7.0.5 python-decouple-3.8 python-multipart-0.0.6 requests-2.31.0 sniffio-1.3.0 sqlalchemy-2.0.25 starlette-0.35.1 tqdm-4.66.1 twilio-8.11.1 typing-extensions-4.9.0 urllib3-2.1.0 uvicorn-0.26.0 yarl-1.9.4
 ```
 
-- Install SQL Server Express
+- Install SQL Server Express (https://www.microsoft.com/en-GB/sql-server/sql-server-downloads) and SQL Server Management Studio (https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16): 
 
 - Create a sample DB
 
-```
-create table Conversations(
-	id int identity(1,1) primary key,
+```sql
+CREATE TABLE Conversations(
+    id int identity(1,1) primary key,
     sender varchar(max) null,
     message varchar(max) null,
     response varchar(max) null
@@ -240,7 +241,7 @@ create table Conversations(
 
 Set a barebone API (rest_fastapi.py):
 
-```
+```python
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -250,20 +251,19 @@ async def index():
     return {"msg": "running"}
 ```
 
-Run the API:
+Run the API using `uvicorn bot:app --reload` in you virtual environment:
 
 ```
-(venv) PS C:\repo\OpenAI-Whatsapp-Bot> uvicorn rest_fastapi:app --reload
+(venv) C:\repo\OpenAI-Whatsapp-Bot>uvicorn bot:app --reload
 INFO:     Will watch for changes in these directories: ['C:\\repo\\OpenAI-Whatsapp-Bot']
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [12928] using StatReload
-INFO:     Started server process [12932]
+INFO:     Started reloader process [248] using StatReload
+INFO:     Started server process [7056]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 ```
 
 ![image](https://github.com/JordiCorbilla/OpenAI-Whatsapp-Bot/assets/7347994/b8c2f61f-f070-4b04-bbeb-7fbfd71d1bbf)
-
   
 ## Final result
 ![image](https://github.com/JordiCorbilla/OpenAI-Whatsapp-Bot/assets/7347994/9374ef31-880d-46a0-89cb-09b3b7ebfa54)
