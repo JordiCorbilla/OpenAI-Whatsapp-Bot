@@ -3,13 +3,14 @@ OpenAI-Whatsapp-Bot
 
 Setup environment:
 
-- Windows 11 PRO
+- Windows 11 PRO (Mini Server x64 Intel Celeron 12 Gb)
 - Python 3.12.1
 - Sql Server Express v15
 - Twilio Account
 - OpenAPI Key
+- Whatsapp (local phone)
 
-## 1) Setup your Twilio Account
+## 1) Setting up your Twilio Account
 
 - Create a free account with Twilio here -> https://www.twilio.com/en-us
 - Setup the WhatsApp messaging using the Twilio Sandbox, you'll be given a `+1` phone number to interact with:
