@@ -254,6 +254,10 @@ async def index():
 Run the API using `uvicorn bot:app --reload` in you virtual environment:
 
 ```
+C:\repo\OpenAI-Whatsapp-Bot\venv\Scripts>activate.bat
+
+then:
+
 (venv) C:\repo\OpenAI-Whatsapp-Bot>uvicorn bot:app --reload
 INFO:     Will watch for changes in these directories: ['C:\\repo\\OpenAI-Whatsapp-Bot']
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
